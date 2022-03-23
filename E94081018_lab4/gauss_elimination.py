@@ -17,7 +17,7 @@ def gauss(a, y):
 
     a_row = np.size(a, 0)
     a_col = np.size(a, 1)
-    x = [float(0)]*a_row
+    x = np.zeros(a_row)
     numerator = 0
 
     for i in range(a_row):
@@ -26,7 +26,6 @@ def gauss(a, y):
         numerator = a[a_row-1-i, a_col-1] - numerator
         x[a_row-1-i] = numerator/a[a_row-1-i, a_col-2-i]
         numerator = 0
-    x = np.array(x)
 
     print("upper triangular matrix:")
     print(a, "\n")
