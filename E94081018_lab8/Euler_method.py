@@ -14,7 +14,7 @@ for i in range(0, len(t) - 1):
     s[i + 1] = s[i] + h*f(t[i], s[i])
 
 plt.figure(figsize = (12, 8))
-plt.plot(t, s,  label='Approximate')
+plt.plot(t, s,  label='Forward Euler Method')
 plt.plot(t, -1/2*np.exp(-2*t), '--', label='Exact', color='red')
 plt.title('Euler v.s. Exact')
 plt.xlabel('t')
